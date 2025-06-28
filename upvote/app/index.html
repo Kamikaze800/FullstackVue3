@@ -22,7 +22,10 @@
           class="media"
           v-bind:class="{ 'blue-border': submission.votes >= 20 }"
         >
-          <submission-component></submission-component>
+          <submission-component
+            v-bind:submission="submission"
+            v-bind:submissions="sortedSubmissions"
+          ></submission-component>
         </article>
       </div>
     </div>

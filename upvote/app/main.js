@@ -31,6 +31,15 @@ v-bind:src="submission.avatar">
 </span>
 </div>
 </div>`,
+props: ["submission", "submissions"],
+methods: {
+  upvote(submissionId){
+    const submission = this.submissions.find(
+      submission => submission.id === submissionId
+    )
+    submission.votes++
+  }
+}
 };
 
 const upvoteApp = {
